@@ -1,0 +1,46 @@
+.footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid rgb(255, 255, 255, 0.05);
+    padding-block-start: 40px; /* Adjust this value as needed for the top padding */
+    padding-block-end: 60px; /* Keeps the bottom padding at 60px */
+
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__container span {
+    color: var(--primary-color);
+}
+
+.footer__socials {
+    display: flex;
+    column-gap: 20px;
+}
+
+.footer__social-link {
+    color: var(--title-color);
+    font-size: var(--h5-font-size);
+    transition: all 0.7s var(--transition);
+}
+
+.footer__social-link:hover {
+    color: var(--primary-color);
+}
+
+.footer__copyright {
+    justify-content: center;
+}
+
+.footer__copyright:nth-of-type(2) {
+    justify-content: flex-end;
+}
+
+.footer__copyright {
+    font-size: var(--tiny-font-size);
+    font-weight: 700;
+}

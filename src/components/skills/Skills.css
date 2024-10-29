@@ -1,0 +1,70 @@
+.skills {
+    background-image: var(--bg-color);
+}
+
+.skills__wrapper {
+    display: grid;
+    align-items: center;
+    margin-bottom: 220px;
+}
+
+.skills__titles,
+.skills__description {
+    padding-inline: 16px; 
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 24px;
+}
+
+.skills__name {
+    font-size: var(--largest-font-size);
+}
+
+.skills__number {
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.skills__number span {
+    color: var(--primary-color);
+}
+
+.skills__description {
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.skills__bar,
+.skills__percentage {
+    height: 2px;
+}
+
+.skills__bar {
+    background-color: lightgray; /* Gray line as the base */
+    height: 2px;
+    position: relative;
+}
+
+.skills__percentage {
+    display: block;
+    background-color: var(--primary-color); /* Orange or primary color */
+    width: calc(var(--percentage) * 1%); /* Adjust width based on percentage */
+    height: 2px;
+    position: relative;
+}
+
+.skills__percentage span {
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -9px;
+}

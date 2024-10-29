@@ -1,0 +1,9 @@
+.gallery {
+    background-color: hsl(16, 100%, 98%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.gallery__heading {
+    padding-top: 60px;
+}

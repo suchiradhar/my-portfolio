@@ -1,0 +1,38 @@
+.projects {
+    background-image: var(--bg-color);
+}
+
+.projects__wrapper {
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    margin-bottom: 220px;
+}
+
+.projects__subtitle {
+    color: hsl(0, 0%, 50%);
+    font-size: var(--tiny-font-size);
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: block; /* Block-level element takes up the full width and starts on a new line */
+}
+
+.projects__title {
+    font-size: var(--h5-font-size);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.project__image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    max-height: 330px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+}
+
+.project__cardcontent {
+    align-self: flex-start; /* Align content to the left */
+    width: 100%; /* Ensure the content takes full width */
+    margin-bottom: 60px;
+  }
