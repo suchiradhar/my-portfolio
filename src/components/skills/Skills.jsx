@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import './Skills.css'
+import './Skills.css';
+import "../../App.css";
 
 const SkillsCard = ({ name, percentage, description }) => (
     <div className='skills__item'>

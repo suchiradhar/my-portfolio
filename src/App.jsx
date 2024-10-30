@@ -34,7 +34,7 @@ function App() {
         <nav className="navbar">
           <div className="logo-container">
             {/* Logo with link to homepage */}
-            <Link to="/"><img src={reactLogo} alt="Suchira Dhar" className="logo react-logo" /></Link>
+            <Link to="/my-portfolio"><img src={reactLogo} alt="Suchira Dhar" className="logo react-logo" /></Link>
           </div>
 
           {/* Navigation links to different sections of the site */}
@@ -52,7 +52,7 @@ function App() {
       <main className="main">
         <Routes>
           {/* Route for the homepage, rendering multiple components */}
-          <Route path="/" element={<>
+          <Route path="/my-portfolio" element={<>
             <Home />
             <Projects />
             <Skills />

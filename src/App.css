@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.main {
+  min-width: 1200px;
+}
+
 /*------------------------------------*\
 #CSS VARIABLES
 \*------------------------------------*/

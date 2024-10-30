@@ -8,6 +8,7 @@ import blogimageTwo from '../../assets/blogimageTwo.jpg';
 import blogimageThree from '../../assets/blogimageThree.jpg';
 
 import './Blog.css';
+import "../../App.css";
 
 
 const Blog = () => {

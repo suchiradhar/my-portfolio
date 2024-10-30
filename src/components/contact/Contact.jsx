@@ -4,6 +4,7 @@ import { FaRegAddressBook, FaRegEnvelope, FaRegUser, FaRegMap
 } from "react-icons/fa";
 
 import './Contact.css';
+import "../../App.css";
 
 const Contact = () => {
         const [form, setForm] = useState({
