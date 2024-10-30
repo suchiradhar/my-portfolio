@@ -63,5 +63,6 @@
     background: hsl(0, 0%, 100%);
     transform: scale(1.02);
     box-shadow: 0 16px 24px rgba(185, 138, 121, 0.2);
+    text-decoration: none;
   }
   

@@ -69,6 +69,7 @@ header.scrolled {
 
 .nav-links a:hover {
   color: var(--primary-color); /* Change link color on hover to primary color */
+  text-decoration: none;
 }
 
 /* General container style with max width and center alignment */
@@ -110,7 +111,6 @@ header.scrolled {
 
 /* Hover effect for buttons */
 .btn::before {
-  content: '';
   position: absolute;
   inset: 2px;
   background-color: var(--primary-color);
