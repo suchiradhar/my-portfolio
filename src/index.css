@@ -1,0 +1,111 @@
+/* Root CSS variables for colors, typography, shadows, and transitions */
+:root {
+    /**
+      * colors - Main color scheme and gradients for the website
+      */
+      --primary-color: hsl(10, 84%, 51%);
+      --title-color: hsl(0, 0%, 8%);
+      --text-color: hsl(0, 0%, 8%);
+      --hover-text-color: rgb(255, 255, 255);
+      --bg-color: rgb(255, 255, 255);
+      --bg-color-alt: hsl(213, 10%, 21%);
+      --container-color: hsl(0, 0%, 100%);
+      --border-color: hsla(210, 2%, 65%);
+      --first-gradient: linear-gradient (0deg, var(--bg-color-alt) 0%, var(--bg-color) 100%);
+      --second-gradient: linear-gradient(180deg, var(--bg-color-alt) 0%, var(--bg-color) 100%);
+      --third-gradient: linear-gradient (180deg, var(--bg-color) 0%, var(--bg-color) 100%);
+  
+      /**
+      * typography - Font settings for different text elements
+      */
+      --body-font: 'Jost', sans-serif;
+      --second-font: 'Caveat', cursive;
+  
+      /* Font sizes for headings and text */
+      --biggest-font-size: 90px;
+      --h1-font-size: 44px;
+      --h2-font-size: 30px;
+      --h3-font-size: 28px;
+      --h4-font-size: 24px;
+      --h5-font-size: 22px;
+      --largest-font-size: 21px;
+      --larger-font-size: 20px;
+      --large-font-size: 16px;
+      --normal-font-size: 16px;
+      --small-font-size: 15px;
+      --smaller-font-size: 14px;
+      --tiny-font-size: 13px;
+  
+      /**
+      * shadow - General shadow style for elements
+      */
+      --shadow: 5px 5px rgb(255 255 255 / 10%);
+  
+      /**
+      * transition - Transition setting for smooth animations
+      */
+      --transition: cubic-bezier(0.5, 0.1, 0.25, 1);
+    }
+  
+  /*------------------------------------*\
+  #RESET
+  \*------------------------------------*/
+  
+  /* Basic reset for consistent styling across browsers */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  button,
+  input,
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
+  
+  /* Body settings for background color and text color */
+  body {
+    color: var(--text-color);
+    background-color: hsl(16, 100%, 98%);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--title-color);
+    font-weight: 700;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  p {
+    line-height: 1.7;
+  }
+  
+  /* Link styles without default underline */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Remove borders and background for form elements */
+  input,
+  textarea,
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  /* Pointer cursor for buttons */
+  button {
+    cursor: pointer;
+  }
+  
+  /* Ensure images fit within container */
+  img {
+    max-width: 100%;
+  }

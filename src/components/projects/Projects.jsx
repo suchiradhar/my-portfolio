@@ -5,7 +5,6 @@ import projectThree from '../../assets/projectThree.jpg';
 import projectFour from '../../assets/projectFour.jpg';
 
 import './Projects.css';
-import "../../App.css";
 
 const ProjectCard = ({ image, title, subtitle, link }) => (
   <a href={link} target="_blank" rel="noopener noreferrer" className="project__card">

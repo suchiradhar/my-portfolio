@@ -16,126 +16,6 @@ html {
 }
 
 /*------------------------------------*\
-#CSS VARIABLES
-\*------------------------------------*/
-
-/* Root CSS variables for colors, typography, shadows, and transitions */
-:root {
-  /**
-    * colors - Main color scheme and gradients for the website
-    */
-    --primary-color: hsl(10, 84%, 51%);
-    --title-color: hsl(0, 0%, 8%);
-    --text-color: hsl(0, 0%, 8%);
-    --hover-text-color: rgb(255, 255, 255);
-    --bg-color: rgb(255, 255, 255);
-    --bg-color-alt: hsl(213, 10%, 21%);
-    --container-color: hsl(0, 0%, 100%);
-    --border-color: hsla(210, 2%, 65%);
-    --first-gradient: linear-gradient (0deg, var(--bg-color-alt) 0%, var(--bg-color) 100%);
-    --second-gradient: linear-gradient(180deg, var(--bg-color-alt) 0%, var(--bg-color) 100%);
-    --third-gradient: linear-gradient (180deg, var(--bg-color) 0%, var(--bg-color) 100%);
-
-    /**
-    * typography - Font settings for different text elements
-    */
-    --body-font: 'Jost', sans-serif;
-    --second-font: 'Caveat', cursive;
-
-    /* Font sizes for headings and text */
-    --biggest-font-size: 90px;
-    --h1-font-size: 44px;
-    --h2-font-size: 30px;
-    --h3-font-size: 28px;
-    --h4-font-size: 24px;
-    --h5-font-size: 22px;
-    --largest-font-size: 21px;
-    --larger-font-size: 20px;
-    --large-font-size: 16px;
-    --normal-font-size: 16px;
-    --small-font-size: 15px;
-    --smaller-font-size: 14px;
-    --tiny-font-size: 13px;
-
-    /**
-    * shadow - General shadow style for elements
-    */
-    --shadow: 5px 5px rgb(255 255 255 / 10%);
-
-    /**
-    * transition - Transition setting for smooth animations
-    */
-    --transition: cubic-bezier(0.5, 0.1, 0.25, 1);
-  }
-
-/*------------------------------------*\
-#RESET
-\*------------------------------------*/
-
-/* Basic reset for consistent styling across browsers */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-button,
-input,
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
-
-/* Body settings for background color and text color */
-body {
-  color: var(--text-color);
-  background-color: hsl(16, 100%, 98%);
-}
-
-h1,
-h2,
-h3 {
-  color: var(--title-color);
-  font-weight: 700;
-}
-
-ul {
-  list-style: none;
-}
-
-p {
-  line-height: 1.7;
-}
-
-/* Link styles without default underline */
-a {
-  text-decoration: none;
-}
-
-/* Remove borders and background for form elements */
-input,
-textarea,
-button {
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-/* Pointer cursor for buttons */
-button {
-  cursor: pointer;
-}
-
-/* Ensure images fit within container */
-img {
-  max-width: 100%;
-}
-
-/*------------------------------------*\
-#REUSABLE CSS CLASSES
-\*------------------------------------*/
-
-/*------------------------------------*\
 #HEADER STYLES
 \*------------------------------------*/
 
@@ -194,8 +74,8 @@ header.scrolled {
 /* General container style with max width and center alignment */
 .container {
   max-width: 1300px;
-  padding-inline: 12px;
-  margin-inline: auto;
+  padding: 12px;
+  margin: auto;
 }
 
 /* Text style for uppercase and letter spacing */
@@ -240,6 +120,7 @@ header.scrolled {
   opacity: 0;
   transition: all 0.7s var(--transition);
   z-index: -1;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -291,56 +172,4 @@ header.scrolled {
   font-size: var(--h3-font-size);
   text-transform: capitalize;
   margin-left: 10px;
-}
-
-/*------------------------------------*\
-#PROJECT & SKILLS STYLES
-\*------------------------------------*/
-
-/* Project grid layout */
-.project__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin: 0 auto;
-}
-
-/* Project card styling with hover effect */
-.project__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 24px;
-  border: 2px solid hsl(16, 100%, 98%);
-  min-width: 580px;
-  max-height: 480px;
-  overflow: hidden; 
-  border-radius: 18px;
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-}
-
-.project__card:hover {
-  background: hsl(0, 0%, 100%);
-  transform: scale(1.02);
-  box-shadow: 0 16px 24px rgba(185, 138, 121, 0.2);
-}
-
-/* Skills grid layout */
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.skills__item {
-  background-color: var(--container-color);
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 20px;
-  border: 2px solid hsl(16, 100%, 98%);
-  min-width: 220px;
-  max-height: 480px;
-  overflow: hidden; 
-  border-radius: 18px;
 }
