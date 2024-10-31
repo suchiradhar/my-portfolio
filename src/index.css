@@ -143,13 +143,13 @@ img {
   transform: scale(0.3);
   filter: blur(10px);
   opacity: 0;
-  transition: all 0.7s var(--transition);
+  transition: all 0.7s ease-in-out;
   z-index: -1;
   text-decoration: none;
 }
 
 .btn:hover {
-  color: var(--hover-text-color);
+  color: var(--primary-color);
 }
 
 .btn:hover::before {

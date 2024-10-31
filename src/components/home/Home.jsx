@@ -75,10 +75,10 @@ const Home = () => {
                     </div>
 
                     <div className='home__btns'>
-                            <a href='/CV-suchiradhar.pdf.' download className='btn text-cs'>
+                             <a href='./public/resume.pdf' download className='btn text-cs'>
                                 Download Resume
                             </a>
-                            
+
                             <a href='#contact' className='hero__link text-cs'>
                                 Contact me
                             </a>

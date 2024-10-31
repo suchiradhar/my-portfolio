@@ -126,3 +126,49 @@ header.scrolled {
   text-transform: capitalize;
   margin-left: 10px;
 }
+
+
+/*------------------------------------*\
+#BUTTON STYLES
+\*------------------------------------*/
+
+/* Common button styling */
+.btn,
+.hero__link {
+  color: var(--text-color);
+  font-size: var(--tiny-font-size);
+  font-weight: 700;
+  height: 56px;
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  border: 2px solid var(--border-color);
+  padding-inline: 40px;
+  border-radius: 56px;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background-color: var(--primary-color);
+  border-radius: inherit;
+  transform: scale(0.3);
+  filter: blur(10px);
+  opacity: 0;
+  transition: all 0.7s var(--transition);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
