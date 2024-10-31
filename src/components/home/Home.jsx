@@ -4,6 +4,7 @@ import shapeOne from "../../assets/shape-1.png";
 import shapeTwo from "../../assets/shape-2.png";
 
 import { FaBehance, FaDribbble, FaLinkedin, FaMedium } from "react-icons/fa";
+import CV from '../../assets/resume.pdf';
 
 import './Home.css';
 
@@ -75,7 +76,7 @@ const Home = () => {
                     </div>
 
                     <div className='home__btns'>
-                             <a href='./public/resume.pdf' download className='btn text-cs'>
+                             <a href={CV} download className='btn text-cs'>
                                 Download Resume
                             </a>
 
