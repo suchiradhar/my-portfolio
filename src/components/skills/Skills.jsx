@@ -1,20 +1,28 @@
 import React from 'react';
 
+// Importing CSS styles for the Skills component
 import './Skills.css';
 import "../../App.css";
 
+// Skill card component that displays individual skill details
 const SkillsCard = ({ name, percentage, description }) => (
     <div className='skills__item'>
+
+        {/* Titles for the skill name and percentage */}
         <div className="skills__titles">
             <h3 className="skills__name">{name}</h3>
             <span className='skills__number'>{percentage} <span>%</span>
             </span>
         </div>
-
+            
+            {/* Description of the skill */}
             <p className="skills__description">{description}
             </p>
 
+            {/* Skill progress bar */}
             <div className='skills__bar'>
+
+                {/* Progress indicator for the skill percentage */}
                 <span className='skills__percentage' style={{ '--percentage': percentage }}>
                     <span></span>
                 </span>
@@ -23,16 +31,22 @@ const SkillsCard = ({ name, percentage, description }) => (
     </div>
   );
 
+// Main Skills component that renders the skills section
 const Skills = () => {
     return (
         <section className='skills' id='skills'>
             <div className="skills__wrapper">
+
+                {/* Section title and subtitle */}
                 <h2 className="section__title text-cs">Professional Skills</h2>
                 <p className="section__subtitle">
                 My <span>Knowledge</span>
                 </p>
 
+                {/* Grid layout for skill cards */}
                 <div className='skills__grid container'>
+
+                    {/* Individual skill cards with respective details */}
                     <SkillsCard 
                     name="Figma"
                     percentage="90"

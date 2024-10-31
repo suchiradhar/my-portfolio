@@ -1,15 +1,28 @@
+// Importing React library for building the component
 import React from 'react';
+
+// Importing the blog image from assets
 import blogimageThree from '../../../../assets/blogimageThree-fullsize.jpg';
 
+// Importing the CSS stylesheet for Blog Three
 import './BlogThree.css';
 
+// Defining the BlogPostThree functional component
 const BlogPostThree = () => {
   return (
+
+        /* Container for the entire blog post content */
         <div className='blogpost__container'>
             <h2 className='section__title'>Tell-a-story Shot</h2>
+
+            {/* Main content wrapper for the blog post */}
             <div className='blogpost__content container'>
               <img src={blogimageThree} alt="Professional Headshot" className="blogpost__imgThree" />
+              
+              {/* Container for the detailed content of the blog post */}
               <div className='blog__content container'>
+
+                {/* Container for image specifications */}
                 <div className='img__specscontainer container'>
                   <h4 className='img__heading'>Image Specs</h4>
                   <p className='img__specs'>
@@ -20,8 +33,12 @@ const BlogPostThree = () => {
                       ISO: 80
                   </p>
                 </div>
+
+                {/* Container for the process description */}
                 <div className='img__processcontainer container'>
                   <h4 className='img__heading'>Process</h4>
+
+                  {/* Paragraphs for the photography process */}
                   <p className='img__process'>
                                         The picture above reflects my passion for music and writing. 
                                         I like to spend time in nature with my books, pens, colors, guitar and iPad. 
@@ -55,4 +72,4 @@ const BlogPostThree = () => {
   );
 };
 
-export default BlogPostThree;
+export default BlogPostThree

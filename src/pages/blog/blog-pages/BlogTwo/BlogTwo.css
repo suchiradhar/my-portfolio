@@ -1,9 +1,11 @@
+/* Main container for the blog post, centered with padding for spacing */
 .blogpost__container {
     width: 100%;
     padding: 60px 0;
     text-align: center;
 }
 
+/* Container for the content of the blog post */
 .blogpost__content {
     color: var(--text-color);
     gap:20px;
@@ -12,31 +14,32 @@
     padding: 20px;
 }
 
+/* Styles for the main blog image */
 .blogpost__imgTwo {
     width: 30%;
     height: auto;
     margin-bottom: 20px;
 }
 
+/* Container for the blog content text */
 .blog__content {
     width: 6%;
     font-size: var(--large-font-size);
     line-height: 1.7;
 }
 
+/* Container for image specifications */
 .img__specscontainer {
     margin-bottom: 40px;
 }
 
-.img__specscontainer p {
-    margin-bottom: 8px;
-}
-
+/* Styles for the heading of the image specs section */
 .img__specsheading {
     font-size: var(--large-font-size);
     margin-bottom: 12px;
 }
 
+/* Container for the process description */
 .img__processcontainer p {
     margin-bottom: 8px;
 }

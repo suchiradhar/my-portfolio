@@ -1,7 +1,9 @@
+/* Background color for the projects section */
 .projects {
     background-image: var(--bg-color);
 }
 
+/* Wrapper for the projects section, ensuring full height and centering content */
 .projects__wrapper {
     min-height: 100vh;
     display: grid;
@@ -9,31 +11,35 @@
     margin-bottom: 220px;
 }
 
+/* Subtitle styling within the projects section */
 .projects__subtitle {
     color: hsl(0, 0%, 50%);
     font-size: var(--tiny-font-size);
     font-weight: 600;
     margin-bottom: 14px;
-    display: block; /* Block-level element takes up the full width and starts on a new line */
+    display: block;
 }
 
+/* Title styling within the projects section */
 .projects__title {
     font-size: var(--h5-font-size);
     font-weight: 500;
     margin-bottom: 8px;
 }
 
+/* Image styling for project cards */
 .project__image {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
+    height: auto;
     max-height: 330px;
     border-radius: 20px;
     margin-bottom: 28px;
 }
 
+/* Content area within each project card */
 .project__cardcontent {
-    align-self: flex-start; /* Align content to the left */
-    width: 100%; /* Ensure the content takes full width */
+    align-self: flex-start;
+    width: 100%;
     margin-bottom: 60px;
   }
 
@@ -45,8 +51,8 @@
     margin: 0 auto;
   }
   
-  /* Project card styling with hover effect */
-  .project__card {
+/* Individual project card styling */
+.project__card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +65,8 @@
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   }
   
-  .project__card:hover {
+/* Hover effect for project cards */
+.project__card:hover {
     background: hsl(0, 0%, 100%);
     transform: scale(1.02);
     box-shadow: 0 16px 24px rgba(185, 138, 121, 0.2);

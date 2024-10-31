@@ -1,11 +1,15 @@
 import React from 'react';
+
+// Import project images from assets
 import projectOne from '../../assets/projectOne.jpg';
 import projectTwo from '../../assets/projectTwo.jpg';
 import projectThree from '../../assets/projectThree.jpg';
 import projectFour from '../../assets/projectFour.jpg';
 
+// Import CSS for the component
 import './Projects.css';
 
+// ProjectCard component to display individual project details
 const ProjectCard = ({ image, title, subtitle, link }) => (
   <a href={link} target="_blank" rel="noopener noreferrer" className="project__card">
     <img src={image} alt={title} className="project__image" />
@@ -16,15 +20,20 @@ const ProjectCard = ({ image, title, subtitle, link }) => (
   </a>
 );
 
+// Projects component to display a collection of project cards
 const Projects = () => {
   return (
+    // Main section for Projects with id 'projects'
     <section className="projects" id="projects">
       <div className='projects__wrapper'>
+
+        {/* Section title and subtitle */}
         <h2 className="section__title text-cs">RECENT WORK</h2>
         <p className="section__subtitle">
           My <span>Projects</span>
         </p>
 
+        {/* Render individual ProjectCard components with respective props */}
         <div className="project__grid container">
           <ProjectCard 
             image={projectOne}

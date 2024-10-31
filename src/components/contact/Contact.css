@@ -1,33 +1,40 @@
+/* Sets the background image for the contact section */
 .contact {
     background-image: var(--bg-color);
 }
 
+/* Adds top and bottom margin for spacing the contact wrapper */
 .contact__wrapper {
     margin: 220px;
 }
 
+/* Creates a grid layout with two columns in the contact container */
 .contact__container {
     display: grid;
-    grid-template-columns: 5fr 7fr; /* Adjust the proportions */
-    gap: 20px; /* Adds spacing between columns */
+    grid-template-columns: 5fr 7fr;
+    gap: 20px;
 }
 
+/* Styles for each contact card */
 .contact__card {
     padding-left: 130px;
     margin-bottom: 40px;
     position: relative;
 }
 
+/* Adds vertical padding for the contact content area */
 .contact__content {
     padding: 24px 0;
 }
 
+/* Sets a border and background color for card icons and form inputs */
 .contact__card-icon,
 .contact__form-input {
     border: 2px solid var(--border-color);
     background-color: var(--container-color);
 }
 
+/* Positions and styles the icon within each contact card */
 .contact__card-icon {
     position: absolute;
     top: 0;
@@ -41,6 +48,7 @@
     place-items: center;
 }
 
+/* Adds a horizontal line after each card icon */
 .contact__card-icon::after {
     content: "";
     width: 40px;
@@ -52,23 +60,27 @@
     margin-top: -1px;
 }
 
+/* Sets font styling for card titles */
 .contact__card-title {
     font-size: var(--h2-font-size);
     font-family: var(--second-font);
     padding-block: 6px;
 }
 
+/* Configures the form group to be a two-column grid */
 .contact__form-group {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
 }
 
+/* Defines a grid layout for each form input division */
 .contact__form-div {
     display: grid;
     row-gap: 10px;
     margin-bottom: 30px;
 }
 
+/* Styles the label tag in each form input */
 .contact__form-tag {
     margin-left: 30px;
     font-size: var(--smaller-font-size);
@@ -76,10 +88,12 @@
     line-height: 1.7;
 }
 
+/* Highlights required fields with a primary color */
 .contact__form-tag b {
     color: var(--primary-color);
 }
 
+/* Styles the text inputs in the form */
 .contact__form-input {
     color: var(--title-color);
     height: 60px;
@@ -87,12 +101,14 @@
     padding-inline: 30px;
 }
 
+/* Customizes the text area input for the message field */
 .contact__form-area .contact__form-input {
     height: 140px;
     padding-block: 20px;
     resize: none;
 }
 
+/* Styles the submit section with button alignment */
 .contact__submit {
     display: flex;
     align-items: center;

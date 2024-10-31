@@ -1,11 +1,14 @@
+/* Styling for the blog section */
 .blog {
     background-color: hsl(16, 100%, 98%);
 }
-  
+
+/* Adds top padding to the blog heading for spacing */
 .blog__heading {
     padding-top: 60px;
 }
 
+/* Defines the grid layout for blog items with columns and gap spacing */
 .blog__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -13,6 +16,7 @@
     margin-bottom: 120px;
 }
 
+/* Styles individual blog cards */
 .blog__item {
     padding: 24px;
     border: 2px solid hsl(16, 100%, 98%);
@@ -20,14 +24,21 @@
     border-radius: 18px;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
-  
+
+/* Hover effect for blog items */
 .blog__item:hover {
     background: hsl(0, 0%, 100%);
     transform: scale(1.02);
-    box-shadow: 0 16px 24px rgba(185, 138, 121, 0.2); /* Adds shadow on hover */
+    box-shadow: 0 16px 24px rgba(185, 138, 121, 0.2);
     text-decoration: none;
 }
 
+/* Hover effect for blog titles to changes color on item hover */
+.blog__item:hover .blog__title {
+    color: var(--primary-color);
+}
+
+/* Styles the date text */
 .blog__date {
     display: block;
     color: hsl(0, 0%, 50%);
@@ -36,6 +47,7 @@
     margin-bottom: 16px;
 }
 
+/* Sets the font size and spacing for blog title */
 .blog__title {
     font-size: var(--h4-font-size);
     line-height: 1.3;
@@ -43,15 +55,13 @@
     transition: all 0.7s var(--transition);
 }
 
-.blog__title:hover {
-    color: var(--primary-color);
-}
-
+/* Styles description text */
 .blog__description {
     margin-bottom: 10px;
     color: var(--text-color);
 }
 
+/* Defines blog image with margin, fixed dimensions, rounded corners, and fit */
 .blog__img {
     margin-bottom: 30px;
     height: 260px;
@@ -60,11 +70,13 @@
     object-fit: cover;
 }
 
+/* Aligns the link text and icon within each card */
 .blog__cardlink {
     display: flex;
     align-items: center;
 }
 
+/* Styles the link text */
 .link__text {
     color: var(--text-color);
     font: var(--tiny-font-size);
@@ -72,6 +84,7 @@
     margin-right: 12px;
 }
 
+/* Sets color for the link icon */
 .link__icon {
     color: var(--primary-color);
 }

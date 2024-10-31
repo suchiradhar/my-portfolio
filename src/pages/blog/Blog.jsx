@@ -1,27 +1,38 @@
 import React from 'react';
+
+// Import Link component to enable navigation between pages
 import { Link } from 'react-router-dom';
 
+// Importing assets and icons
 import { FaArrowRight } from 'react-icons/fa';
 
 import blogimageOne from '../../assets/blogimageOne.jpg';
 import blogimageTwo from '../../assets/blogimageTwo.jpg';
 import blogimageThree from '../../assets/blogimageThree.jpg';
 
+// Importing CSS for Blog component and App
 import './Blog.css';
 import "../../App.css";
 
-
+/**
+* Blog component showcasing recent articles
+*/
 const Blog = () => {
   return (
     <div className='blog' id='blog'>
+
+        {/* Blog section heading */}
         <div className='blog__heading'>
             <h2 className="section__title text-cs">Blog</h2>
             <p className="section__subtitle">
             My <span>Articles</span>
             </p>
         </div>
-      
+    
+    {/* Blog container holding individual blog items */}
     <div className='blog__container container'>
+
+        {/* Blog item one: Professional Headshot */}
         <Link to="/blog/professional-headshot" className='blog__item card-one'>
             <img src={blogimageOne} alt="" className="blog__img" />
             <span className='blog__date text-css'>October 3, 2024</span>
@@ -34,6 +45,7 @@ const Blog = () => {
             </div>
         </Link>
 
+        {/* Blog item two: Aesthetic Shot */}
         <Link to="/blog/aesthetic-shot" className='blog__item card-two'>
             <img src={blogimageTwo} alt="" className="blog__img" />
             <span className='blog__date text-css'>October 7, 2024</span>
@@ -46,6 +58,7 @@ const Blog = () => {
             </div>
         </Link>
 
+        {/* Blog item three: Tell-a-Story Shot */}
         <Link to="/blog/tellastory-shot" className='blog__item card-three'>
             <img src={blogimageThree} alt="" className="blog__img" />
             <span className='blog__date text-css'>October 3, 2024</span>

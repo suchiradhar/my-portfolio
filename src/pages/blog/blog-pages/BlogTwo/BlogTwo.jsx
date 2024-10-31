@@ -1,15 +1,28 @@
+// Importing React library for building the component
 import React from 'react';
+
+// Importing the blog image from assets
 import blogimageTwo from '../../../../assets/blogimageTwo-fullsize.jpg';
 
+// Importing the CSS stylesheet for Blog Two
 import './BlogTwo.css';
 
+// Defining the BlogPostTwo functional component
 const BlogPostTwo = () => {
   return (
+
+        /* Container for the entire blog post content */
         <div className='blogpost__container'>
             <h2 className='section__title'>Aesthetic Shot</h2>
+            
+            {/* Main content wrapper for the blog post */}
             <div className='blogpost__content'>
               <img src={blogimageTwo} alt="Professional Headshot" className="blogpost__imgTwo" />
+              
+              {/* Container for the detailed content of the blog post */}
               <div className='blog__content container'>
+                
+                {/* Container for image specifications */}
                 <div className='img__specscontainer container'>
                   <h4 className='img__specsheading'>Image Specs</h4>
                     <p className='img__specs'>
@@ -20,8 +33,12 @@ const BlogPostTwo = () => {
                         ISO: 2,500
                     </p>
                   </div>
+                
+                {/* Container for the process description */}
                 <div className='img__processcontainer container'>
                   <h4 className='img__heading'>Process</h4>
+                  
+                  {/* Paragraphs for the photography process */}
                   <p className='img__process'>
                     This photograph aims to capture a quiet, celebratory moment with emotional depth. 
                     The lighting and composition evokes a sense of solace and resilience, capturing not just a moment but the warmth and hope that can arise even in solitude.  
@@ -52,4 +69,4 @@ const BlogPostTwo = () => {
   );
 };
 
-export default BlogPostTwo;
+export default BlogPostTwo

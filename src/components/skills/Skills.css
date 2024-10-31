@@ -1,62 +1,74 @@
+/* Background image for the skills section */
 .skills {
     background-image: var(--bg-color);
 }
 
+/* Grid layout for the skills section, centering items vertically */
 .skills__wrapper {
     display: grid;
     align-items: center;
     margin-bottom: 220px;
 }
 
+/* Padding for titles and descriptions */
 .skills__titles,
 .skills__description {
     padding-inline: 16px; 
 }
 
+/* Flex layout for titles, spacing items and centering them vertically */
 .skills__titles {
     display: flex;
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Vertically center items */
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 24px;
 }
 
+/* Font size for skill names */
 .skills__name {
     font-size: var(--largest-font-size);
 }
 
+/* Color and font weight for the skill percentage */
 .skills__number {
     color: var(--title-color);
     font-weight: 700;
 }
 
+/* Color for the percentage symbol */
 .skills__number span {
     color: var(--primary-color);
 }
 
+/* Margin below the description and allows the description to grow */
 .skills__description {
     margin-bottom: 30px;
     flex-grow: 1;
 }
 
+/* Height for the skill progress bar */
 .skills__bar,
 .skills__percentage {
     height: 2px;
 }
 
+/* Background color for the base of the progress bar */
 .skills__bar {
-    background-color: lightgray; /* Gray line as the base */
+    background-color: lightgray;
     height: 2px;
     position: relative;
 }
 
+/* Progress indicator for the skill percentage */
 .skills__percentage {
     display: block;
-    background-color: var(--primary-color); /* Orange or primary color */
-    width: calc(var(--percentage) * 1%); /* Adjust width based on percentage */
+    background-color: var(--primary-color);
+    width: calc(var(--percentage) * 1%);
     height: 2px;
     position: relative;
 }
 
+/* Style for the circular indicator at the end of the progress bar */
 .skills__percentage span {
     background-color: hsl(0, 0%, 100%);
     border: 2px solid var(--border-color);
@@ -69,14 +81,15 @@
     top: -9px;
 }
 
-/* Skills grid layout */
+/* Grid layout for skill cards */
 .skills__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
+}
   
-  .skills__item {
+/* Style for individual skill cards */
+.skills__item {
     background-color: var(--container-color);
     display: flex;
     flex-direction: column;
@@ -87,4 +100,4 @@
     max-height: 480px;
     overflow: hidden; 
     border-radius: 18px;
-  }
+}

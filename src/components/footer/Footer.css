@@ -1,11 +1,13 @@
+/* Main footer styling */
 .footer {
+    /* Sets background color, top border, and padding */
     background-color: var(--bg-color);
-    border-top: 1px solid rgb(255, 255, 255, 0.05);
-    padding-block-start: 40px; /* Adjust this value as needed for the top padding */
-    padding-block-end: 60px; /* Keeps the bottom padding at 60px */
-
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-block-start: 40px;
+    padding-block-end: 60px;
 }
 
+/* Container for all footer items, arranged in three equal sections */
 .footer__container {
     display: flex;
     justify-content: space-between;
@@ -13,34 +15,37 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Span element styling within footer, setting primary color */
 .footer__container span {
     color: var(--primary-color);
 }
 
+/* Container for social icons, with spacing between each icon */
 .footer__socials {
     display: flex;
     column-gap: 20px;
 }
 
+/* Styling and transition effect for individual social links */
 .footer__social-link {
     color: var(--title-color);
     font-size: var(--h5-font-size);
     transition: all 0.7s var(--transition);
 }
 
+/* Hover effect for social links, changing to primary color */
 .footer__social-link:hover {
     color: var(--primary-color);
 }
 
+/* General styling for copyright text */
 .footer__copyright {
     justify-content: center;
-}
-
-.footer__copyright:nth-of-type(2) {
-    justify-content: flex-end;
-}
-
-.footer__copyright {
     font-size: var(--tiny-font-size);
     font-weight: 700;
+}
+
+/* Right-aligns the second copyright item */
+.footer__copyright:nth-of-type(2) {
+    justify-content: flex-end;
 }

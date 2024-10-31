@@ -1,28 +1,45 @@
+// Importing React library for building the component
 import React from 'react';
+
+// Importing the blog image from assets
 import blogimageOne from '../../../../assets/blogimageOne-fullsize.jpg';
 
+// Importing the CSS stylesheet for Blog One
 import './BlogOne.css';
 
+// Defining the BlogPostOne functional component
 const BlogPostOne = () => {
   return (
+       
+        /* Container for the entire blog post content */
         <div className='blogpost__container'>
             <h2 className='section__title'>Professional Headshot</h2>
+            
+            {/* Main content wrapper for the blog post */}
             <div className='blogpost__content'>
               <img src={blogimageOne} alt="Professional Headshot" className="blogpost__imgOne" />
+              
+              {/* Container for the detailed content of the blog post */}
               <div className='blog__content container'>
+                
+                {/* Container for image specifications */}
                 <div className='img__specscontainer container'>
                   <h4 className='img__specsheading'>Image Specs</h4>
                   <p className='img__specs'>
                   Focal length: FE 35mm | 
-                  Lens: 
-                  Aperture: f2.8 | 
+                  Lens: Sony A7C
+                  Aperture: f/2.8 | 
                   ISO: 320 | 
                   Exposure: 0 | 
                   Shutter speed: 1/40
                   </p>
                 </div>
+
+                {/* Container for the process description */}
                 <div className='img__processcontainer container'>
                   <h4 className='img__heading'>Process</h4>
+                  
+                  {/* Paragraphs for the photography process */}
                   <p className='img__process'>
                                         For this photograph, a room was selected with good natural lighting and a clean, non-distracting white background to enhance focus on the subject.
                                         The subject was positioned between two windows to utilize the natural light. A small hand torch with soft white light was held at the bottom of the face to focus light on the face and minimize harsh shadows.
@@ -51,4 +68,4 @@ const BlogPostOne = () => {
   );
 };
 
-export default BlogPostOne;
+export default BlogPostOne
