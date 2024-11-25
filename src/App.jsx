@@ -17,8 +17,8 @@ import Footer from './components/footer/Footer';
 import About from './pages/About/About';
 import Blog from './pages/blog/Blog';
 import Gallery from './pages/gallery/Gallery';
-import Education from './pages/education/Education';
-import Experience from './pages/experience/Experience';
+import Videos from './pages/videos/Videos';
+import Resume from './pages/resume/Resume';
 
 // Importing individual blog pages for detailed blog posts
 import BlogPostOne from './pages/blog/blog-pages/BlogOne/BlogOne';
@@ -42,8 +42,8 @@ function App() {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/education">Education</Link></li>
-            <li><Link to="/experience">Experience</Link></li>
+            <li><Link to="/videos">Videos</Link></li>
+            <li><Link to="/resume">Resume</Link></li>
           </ul>
         </nav>
       </header>
@@ -63,8 +63,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/experience" element={<Experience />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/resume" element={<Resume />} />
 
           {/* Routes for individual blog posts */}
           <Route path="/blog/professional-headshot" element={<BlogPostOne />} />

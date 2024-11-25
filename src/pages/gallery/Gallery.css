@@ -1,3 +1,4 @@
+/* Gallery container */
 .gallery {
     background-color: hsl(16, 100%, 98%);
     min-height: 100vh;
@@ -6,4 +7,98 @@
 
 .gallery__heading {
     padding-top: 60px;
+    text-align: center;
 }
+
+/* Masonry container */
+.gallery__container {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+/* Each column */
+.gallery__column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Images */
+.gallery__image {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery__image:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+  
+.modal__image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+  
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+  
+.modal__close:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Modal navigation arrows */
+.modal__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.modal__arrow:hover {
+    color: var(--primary-color);
+}
+
+.modal__arrow--left {
+    left: 10px;
+}
+
+.modal__arrow--right {
+    right: 10px;
+}
+  

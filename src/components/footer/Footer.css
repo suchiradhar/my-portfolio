@@ -1,6 +1,7 @@
 /* Main footer styling */
 .footer {
     /* Sets background color, top border, and padding */
+    width: 100%;
     background-color: var(--bg-color);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-block-start: 40px;

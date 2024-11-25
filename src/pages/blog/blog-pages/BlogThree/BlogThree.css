@@ -1,15 +1,13 @@
 /* Main container for the blog post, centered with padding for spacing */
 .blogpost__container {
     width: 100%;
-    padding: 60px 0;
-    text-align: center;
+    padding-top: 60px;
 }
 
 /* Container for the content of the blog post */
 .blogpost__content {
     color: var(--text-color);
-    gap:20px;
-    align-items: center;
+    text-align: center;
     min-height: 100vh;
     padding: 20px;
 }

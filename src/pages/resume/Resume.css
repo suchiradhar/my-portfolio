@@ -1,0 +1,105 @@
+.resume {
+    background-color: hsl(16, 100%, 98%);
+    min-height: 100vh;
+}
+
+.resume__heading {
+    padding: 60px 20px;
+}
+
+.resume__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 180px;
+}
+
+.resume__groupheading {
+    text-align: center;
+    font-size: var(--h4-font-size);
+    padding-bottom: 30px;
+}
+
+.resume__groupheading,
+.resume__item {
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Remove border-right for the first item in each group */
+.resume__item.first {
+    border-right: none;
+}
+
+.resume__item {
+    position: relative;
+    border-right: 2px solid var(--border-color);
+}
+
+.resume__header,
+.resume__content {
+    padding: 32px 30px;
+}
+
+.resume__subtitle {
+    font-size: var(--larger-font-size);
+    cursor: pointer;
+}
+
+.resume__icon {
+    background-color: var(--container-color);
+    border: 2px solid var(--border-color);
+    font-size: var(--h2-font-size);
+    box-shadow: var(--shadow);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    line-height: 1.3em;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: -24px;
+    bottom: -24px;
+    z-index: 10;
+    transition: all 1.2s ease 0s;
+}
+
+/* Default collapsed state for content */
+.resume__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 1s ease;
+    padding-inline: 30px 50px;
+}
+
+/* Expanded state for content */
+.resume__item.show-content .resume__content {
+    max-height: 500px;
+    opacity: 1;
+    padding-inline: 30px 50px;
+}
+
+.show-content {
+    max-height: 500px;
+}
+
+.resume__date-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume__title {
+    font-family: var(--second-font);
+    font-size: var(--h4-font-size);
+}
+
+.resume__date {
+    color: var(--title-color);
+    font-size: var(--tiny-font-size);
+    font-weight: 700;
+}
+
+.resume__description {
+    margin-block: 20px 20px;
+}

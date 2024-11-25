@@ -1,5 +1,6 @@
-// Importing React library for building the component
-import React from 'react';
+import React, { useState } from "react";
+import AddPostForm from "../../../../features/posts/addPostForm";
+import PostsList from "../../../../features/posts/postsList";
 
 // Importing the blog image from assets
 import blogimageThree from '../../../../assets/blogimageThree-fullsize.jpg';
@@ -68,6 +69,12 @@ const BlogPostThree = () => {
                 </div>
               </div>
             </div>
+
+            <div className="comments__container container">
+              <AddPostForm />
+              <PostsList />
+            </div>
+
         </div>
   );
 };

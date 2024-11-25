@@ -73,7 +73,6 @@ const Blog = () => {
         </Link>
     </div>
 
-
     </div>
   );
 };

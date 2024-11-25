@@ -22,6 +22,7 @@ html {
 
 /* Main header style */
 .header {
+  width: 100%;
   background-color: var(--bg-color); /* Set header background color to bg color */
   padding: 2rem 1.5rem 1.5rem 1.5rem; /* Top, right, bottom, left padding */
 }
@@ -32,6 +33,7 @@ header.scrolled {
 
 /* Navbar styling for layout and alignment */
 .navbar {
+  width: 100%;
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space out navbar items */
   align-items: center; /* Vertically center items */
@@ -148,4 +150,16 @@ header.scrolled {
   padding-inline: 40px;
   border-radius: 56px;
   box-shadow: var(--shadow);
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .header {
+    width: 100%;
+  }
 }
