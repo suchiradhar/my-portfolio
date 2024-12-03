@@ -13,7 +13,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 /* Span element styling within footer, setting primary color */
@@ -49,4 +48,27 @@
 /* Right-aligns the second copyright item */
 .footer__copyright:nth-of-type(2) {
     justify-content: flex-end;
+}
+
+@media all and (max-width: 480px) {
+    .footer {
+        padding-block-start: 24px;
+        padding-block-end: 24px;
+    }
+
+    .footer__container{
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 0px 28px;
+    }
+
+    .footer__copyright {
+        font-size: var(--small-font-size);
+    }
+
+    .footer__social-link {
+        font-size: var(--h5-font-size);
+    }
 }

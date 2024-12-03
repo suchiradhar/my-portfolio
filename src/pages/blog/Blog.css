@@ -1,5 +1,6 @@
 /* Styling for the blog section */
 .blog {
+    width: 100%;
     background-color: hsl(16, 100%, 98%);
 }
 
@@ -20,7 +21,6 @@
 .blog__item {
     padding: 24px;
     border: 2px solid hsl(16, 100%, 98%);
-    overflow: hidden; 
     border-radius: 18px;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
@@ -88,4 +88,50 @@
 .link__icon {
     color: var(--primary-color);
 }
-  
+
+@media (max-width: 480px) {
+    .blog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog__heading {
+        padding-top: 60px;
+    }
+
+    .blog__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(1fr));
+        gap: 42px;
+    }
+
+    .blog__img {
+        width: 100%;
+    }
+
+    /* Styles the date text */
+    .blog__date {
+        font-size: var(--large-font-size);
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+
+    /* Sets the font size and spacing for blog title */
+    .blog__title {
+        font-size: var(--h3-font-size);
+    }
+
+    /* Styles description text */
+    .blog__description {
+        font-size: var(--large-font-size);
+        color: var(--text-color);
+    }
+
+    /* Styles the link text */
+    .link__text {
+        font-size: var(--large-font-size);
+        font-weight: 500;
+    }
+}

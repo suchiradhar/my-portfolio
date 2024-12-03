@@ -33,36 +33,6 @@ const Home = () => {
                         <span className="text-cs">I am a <b>Product Designer</b></span>
                     </p>
 
-                    {/* Wrapper for profile image and experience data */}
-                    <div className='home__img-wrapper'>
-                        <div className="home__banner">
-                            <img src={profileimg} alt="" className='home__profile' />
-                        </div>
-
-                        {/* Years of experience */}
-                        <p className='home__data home__data-one'>
-                            <span className='text-lg'>4<b>+ </b>
-                            </span>
-                            <span className='text-sm text-cs'>
-                                Years of <span>Experience</span>
-                            </span>
-                        </p>
-
-                        {/* Completed projects count */}
-                        <p className='home__data home__data-two'>
-                            <span className='text-lg'>45 <b></b>
-                            </span>
-                            <span className='text-sm text-cs'>
-                                Completed <span>Projects</span>
-                            </span>
-                        </p>
-
-                        {/* Shapes */}
-                        <img src={shapeOne} alt='' className='shape shape__1'></img>
-                        <img src={shapeTwo} alt='' className='shape shape__2'></img>
-                        <img src={shapeTwo} alt='' className='shape shape__3'></img>
-                    </div>
-
                     {/* Brief description */}
                     <p className='home__text'>
                         Currently based in Ireland. As a Masters student at the University of Limerick, my disciplines of study include Mobile Interactions, 3D Modelling & Animation, AR/VR, and Human Computer Interaction.
@@ -95,6 +65,38 @@ const Home = () => {
                             </a>
                     </div>
                 </div>
+
+                    {/* Wrapper for profile image and experience data */}
+                    <div className='home__img-wrapper'>
+                        <div className="home__banner">
+                            <img src={profileimg} alt="" className='home__profile' />
+                        </div>
+
+                        <div className='home__data-container'>
+                            {/* Years of experience */}
+                            <p className='home__data home__data-one'>
+                                <span className='text-lg'>4<b>+ </b>
+                                </span>
+                                <span className='text-sm text-cs'>
+                                    Years of <span>Experience</span>
+                                </span>
+                            </p>
+
+                            {/* Completed projects count */}
+                            <p className='home__data home__data-two'>
+                                <span className='text-lg'>45 <b></b>
+                                </span>
+                                <span className='text-sm text-cs'>
+                                    Completed <span>Projects</span>
+                                </span>
+                            </p>
+                        </div>
+
+                        {/* Shapes */}
+                        <img src={shapeOne} alt='' className='shape shape__1'></img>
+                        <img src={shapeTwo} alt='' className='shape shape__2'></img>
+                    </div>
+
             </div>
         </section>
     )

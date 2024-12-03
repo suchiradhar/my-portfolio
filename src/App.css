@@ -12,7 +12,7 @@ html {
 }
 
 .main {
-  min-width: 1200px;
+  width: 100%;
 }
 
 
@@ -22,9 +22,9 @@ html {
 
 /* Main header style */
 .header {
+  display: flex;
   width: 100%;
   background-color: var(--bg-color); /* Set header background color to bg color */
-  padding: 2rem 1.5rem 1.5rem 1.5rem; /* Top, right, bottom, left padding */
 }
 
 header.scrolled {
@@ -32,52 +32,70 @@ header.scrolled {
 }
 
 /* Navbar styling for layout and alignment */
-.navbar {
+.header-content {
   width: 100%;
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space out navbar items */
-  align-items: center; /* Vertically center items */
+  padding: 2rem 1.5rem 0.7rem 1.5rem; /* Top, right, bottom, left padding */
+  align-items: center;
 }
 
 /* Logo container for alignment */
 .logo-container {
   display: flex; /* Use flexbox to align logos */
+  justify-content: space-between;
   align-items: center; /* Center logos vertically */
 }
 
 /* Logo styling */
 .logo {
+  width: 50%;
   height: 40px; /* Set height of logo */
   margin-right: 1rem; /* Add space between logos */
-  width: 50%;
 }
 
 /* Navigation link styling */
-.nav-links {
+.nav-list {
   list-style: none; /* Remove bullets from the nav list */
   display: flex; /* Display links in a row */
+  align-items: center;
 }
 
-.nav-links li {
+.nav-list li {
   margin-right: 2rem; /* Space between each link */
 }
 
 /* Link styling with hover effect */
-.nav-links a {
+.nav-list a {
   color: var(--text-color); /* Set link color to text color */
   font-size: var(--large-font-size);
   font-weight: 500; /* Make links bold */
   transition: color 0.3s ease; /* Smooth color transition on hover */
+  text-align: center;
 }
 
-.nav-links a:hover {
+.nav-list a:hover {
   color: var(--primary-color); /* Change link color on hover to primary color */
   text-decoration: none;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  height: 2px;
+  width: 26px;
+  background: var(--text-color);
+  margin: 5px 0;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
 /* General container style with max width and center alignment */
 .container {
-  max-width: 1300px;
+  width: 80%;
   padding: 12px;
   margin: auto;
 }
@@ -149,17 +167,89 @@ header.scrolled {
   border: 2px solid var(--border-color);
   padding-inline: 40px;
   border-radius: 56px;
-  box-shadow: var(--shadow);
 }
 
-@media only screen and (max-width: 600px) {
-  .header {
+.nav {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav--open {
+  transform: translate(0) !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 480px) {
+  .container {
     width: 100%;
   }
-}
 
-@media (min-width: 601px) {
   .header {
+    display: flex;
     width: 100%;
+    height: 90px;
+    background-color: var(--bg-color); /* Set header background color to bg color */
+  }
+
+  .header-content {
+    display: flex;
+    align-items: left;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    transform: translateX(-100%);
+    z-index: 1;
+    padding: 24px;
+    box-shadow: 0 16px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav--open {
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    list-style: none; /* Remove bullets from the nav list */
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  
+  .nav-list a {
+    font-size: var(--largest-font-size);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .btn,
+  .hero__link {
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+    height: 56px;
+  }
+
+  .btn {
+    padding-inline: 24px;
+  }
+  
+  .section__subtitle {
+    font-size: var(--large-font-size);
+    margin-bottom: 52px;
   }
 }

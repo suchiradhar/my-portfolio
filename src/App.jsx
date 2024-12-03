@@ -1,5 +1,5 @@
 // Importing core React and React Router components
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Importing logo asset and CSS for styling
@@ -26,26 +26,51 @@ import BlogPostTwo from './pages/blog/blog-pages/BlogTwo/BlogTwo';
 import BlogPostThree from './pages/blog/blog-pages/BlogThree/BlogThree';
 
 function App() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     // Setting up the main Router component for routing in the application
     <Router>
       {/* Header section with navigation bar */}
       <header className="header">
-        <nav className="navbar">
-          <div className="logo-container">
+        <div className="header-content">
             {/* Logo with link to homepage */}
-            <Link to="/my-portfolio"><img src={reactLogo} alt="Suchira Dhar" className="logo react-logo" /></Link>
+            <Link to="/my-portfolio"><img src={reactLogo} alt="Suchira Dhar" className="logo" />
+            </Link>
+
+          {/* Navigation */}
+          <nav className={`nav ${menuOpen ? "nav--open" : ""}`}>
+            <ul className="nav-list">
+              <li className="nav-item">
+                <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/videos" onClick={() => setMenuOpen(false)}>Videos</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Hamburger Icon */}
+          <div className={`hamburger ${menuOpen ? "hamburger--open" : ""}`} onClick={toggleMenu}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
           </div>
 
-          {/* Navigation links to different sections of the site */}
-          <ul className='nav-links'>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/videos">Videos</Link></li>
-            <li><Link to="/resume">Resume</Link></li>
-          </ul>
-        </nav>
+        </div>
+
       </header>
 
       {/* Main content area where different components will render based on routes */}

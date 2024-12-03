@@ -1,42 +1,61 @@
 // Importing required modules and assets
-import axios from "axios"; // Importing axios for making HTTP requests
 import React, { useState } from "react"; // Importing React and useState hook for state management
 import { FaRegAddressBook, FaRegEnvelope, FaRegUser, FaRegMap } from "react-icons/fa"; // Importing icons from react-icons
+
+import Swal from 'sweetalert2'
 
 // Importing CSS files for styling the Contact component and global styles
 import './Contact.css';
 import "../../App.css";
 
+
 // Defining the Contact component
 const Contact = () => {
-    // Initializing state 'form' to manage the contact form data with default empty values
+
     const [form, setForm] = useState({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
     });
 
-    // Event handler to update form state on input change
-    const handleChange = (e) => {
-        const name = e.target.name; // Getting the name of the input field
-        const value = e.target.value; // Getting the value of the input field
-        setForm({ ...form, [name]: value }); // Updating the specific field in the form state
-    };
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+    
+        formData.append("access_key", "6e0c9299-f714-4e55-b6a9-a4b8bc6af589");
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+        }).then((res) => res.json());
+    
+        if (res.success) {
+            Swal.fire({
+                title: "Success!",
+                text: "Message sent successfully!",
+                icon: "success"
+              });
 
-    // Event handler to handle form submission
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Preventing the default form submission
-
-        // Making a POST request to the specified URL with form data
-        axios.post('https://api.sheetbest.com/sheets/4c8a17f4-b1c8-4d93-8c08-27a485c36ac3', form)
-            .then((response) => {
-                console.log('Success:', response); // Logging success response
-                setForm({ name: "", email: "", subject: "", message: "" }); // Clearing form fields on success
-            })
-            .catch((error) => {
-                console.error('Error:', error); // Logging error response
+              setForm({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
             });
+        }
+      };
+
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
     };
 
     // Returning the JSX for the Contact section
@@ -92,7 +111,7 @@ const Contact = () => {
                     </div>
 
                     {/* Contact form */}
-                    <form className="contact__form" onSubmit={handleSubmit}>
+                    <form className="contact__form" onSubmit={onSubmit}>
                         {/* Group for form input fields */}
                         <div className="contact__form-group grid">
                             {/* Input field for name */}
@@ -100,9 +119,11 @@ const Contact = () => {
                                 <label className="contact__form-tag text-cs">Your full Name <b>*</b></label>
                                 <input 
                                     type="text"
+                                    placeholder="Enter your name"
                                     name="name"
-                                    onChange={handleChange}
                                     value={form.name}
+                                    onChange={handleChange}
+                                    required
                                     className="contact__form-input" />
                             </div>
 
@@ -111,9 +132,11 @@ const Contact = () => {
                                 <label className="contact__form-tag text-cs">Your Email Address <b>*</b></label>
                                 <input 
                                     type="text"
+                                    placeholder="Enter your email"
                                     name="email"
-                                    onChange={handleChange}
                                     value={form.email}
+                                    onChange={handleChange}
+                                    required
                                     className="contact__form-input" />
                             </div>
 
@@ -122,9 +145,11 @@ const Contact = () => {
                                 <label className="contact__form-tag text-cs">Your Subject <b>*</b></label>
                                 <input 
                                     type="text"
+                                    placeholder="Subject of your message"
                                     name="subject"
-                                    onChange={handleChange}
                                     value={form.subject}
+                                    onChange={handleChange}
+                                    required
                                     className="contact__form-input" />
                             </div>
 
@@ -133,16 +158,18 @@ const Contact = () => {
                                 <label className="contact__form-tag text-cs">Your Message <b>*</b></label>
                                 <textarea
                                     name="message"
-                                    onChange={handleChange}
+                                    placeholder="Enter your message"
                                     value={form.message}
+                                    onChange={handleChange}
+                                    required
                                     className="contact__form-input"
                                 ></textarea>
+                                <p>* Accept the terms and conditions.</p>
                             </div>
                         </div>
 
                         {/* Submit button */}
                         <div className="contact__submit">
-                            <p>* Accept the terms and conditions.</p>
                             <button type="submit" className="btn text-cs">Send Message</button>
                         </div>
                     </form>

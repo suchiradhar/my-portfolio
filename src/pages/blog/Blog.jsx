@@ -33,7 +33,7 @@ const Blog = () => {
     <div className='blog__container container'>
 
         {/* Blog item one: Professional Headshot */}
-        <Link to="/blog/professional-headshot" className='blog__item card-one'>
+        <Link to="/blog/professional-headshot" className='blog__item'>
             <img src={blogimageOne} alt="" className="blog__img" />
             <span className='blog__date text-css'>October 3, 2024</span>
             <h3 className='blog__title'>Professional Headshot</h3>
@@ -46,7 +46,7 @@ const Blog = () => {
         </Link>
 
         {/* Blog item two: Aesthetic Shot */}
-        <Link to="/blog/aesthetic-shot" className='blog__item card-two'>
+        <Link to="/blog/aesthetic-shot" className='blog__item'>
             <img src={blogimageTwo} alt="" className="blog__img" />
             <span className='blog__date text-css'>October 7, 2024</span>
             <h3 className='blog__title'>Aesthetic Shot</h3>
@@ -59,7 +59,7 @@ const Blog = () => {
         </Link>
 
         {/* Blog item three: Tell-a-Story Shot */}
-        <Link to="/blog/tellastory-shot" className='blog__item card-three'>
+        <Link to="/blog/tellastory-shot" className='blog__item'>
             <img src={blogimageThree} alt="" className="blog__img" />
             <span className='blog__date text-css'>October 3, 2024</span>
             <h3 className='blog__title'>Tell-a-Story Shot</h3>

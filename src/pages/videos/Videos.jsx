@@ -30,16 +30,24 @@ const Videos = () => {
       {/* OneDrive Video Embedding */}
       <div className="video__container container">
         <h2 className="video__title">Drink For Thought</h2>
-          <div className="video">
-            {/* Embed OneDrive Video */}
-            <iframe src="https://ulcampus-my.sharepoint.com/personal/24163988_studentmail_ul_ie/_layouts/15/embed.aspx?UniqueId=c50c5767-b803-4c1d-9702-dc67149cc472&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=OneUpFileViewer&referrerScenario=EmbedDialog.Create" 
-            width="640" 
-            height="360" 
-            frameborder="0" 
-            scrolling="no" 
-            allowfullscreen 
-            title="Drink for thought.mp4"></iframe>
+          
+        <div className="video">
+          <div className="video-container">
+            <div className="iframe-wrapper">
+              <iframe
+                src="https://ulcampus-my.sharepoint.com/personal/24070742_studentmail_ul_ie/_layouts/15/embed.aspx?UniqueId=550c85a8-154c-4f63-a6e6-91e7e2736e3f&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                width="640"
+                height="360"
+                frameBorder="0"
+                scrolling="no"
+                allowFullScreen
+                title="Drink for Thought"
+                className="video-iframe"
+              ></iframe>
+            </div>
           </div>
+        </div>
+          
           <div className="video__content">
             <p className="video__paragraph">
               The process of filmmaking is both exciting and complex. It's a journey where ideas are brought to life through the combined efforts of many, and the rewards are truly amazing! Films - whether long or short - remain one of the most powerful ways to tell a story.

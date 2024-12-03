@@ -1,17 +1,12 @@
-/* Sets the background image for the contact section */
-.contact {
-    background-image: var(--bg-color);
-}
-
 /* Adds top and bottom margin for spacing the contact wrapper */
 .contact__wrapper {
-    margin: 220px;
+    margin: 120px;
 }
 
 /* Creates a grid layout with two columns in the contact container */
 .contact__container {
     display: grid;
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -95,6 +90,8 @@
 
 /* Styles the text inputs in the form */
 .contact__form-input {
+    font: var(--body-font);
+    font-size: var(--normal-font-size);
     color: var(--title-color);
     height: 60px;
     border-radius: 30px;
@@ -108,10 +105,64 @@
     resize: none;
 }
 
+.contact__form-div p {
+    font-size: var(--smaller-font-size);
+}
+
 /* Styles the submit section with button alignment */
 .contact__submit {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     column-gap: 30px;
+}
+
+@media (max-width: 480px) {
+    .contact__wrapper {
+        margin: 20px;
+    }
+
+    .contact__card {
+        padding-left: 140px;
+        margin-bottom: 26px;
+    }
+
+    .contact__card-icon {
+        width: 52px;
+        height: 52px;
+        font-size: var(--largest-font-size);
+    }
+    
+    .contact__card-data {
+        font-size: var(--larger-font-size);
+        font-weight: 400;
+    }
+
+    .contact__form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .contact__form-tag {
+        font-size: var(--normal-font-size);
+    }
+
+    .contact__form-input {
+        font-size: var(--large-font-size);
+        padding-inline: 20px;
+    }
+
+    .contact__form-div p {
+        font-size: var(--large-font-size);
+    }
+
+    .contact__submit {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 24px;
+    }
 }

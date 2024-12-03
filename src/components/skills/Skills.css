@@ -72,7 +72,6 @@
 .skills__percentage span {
     background-color: hsl(0, 0%, 100%);
     border: 2px solid var(--border-color);
-    box-shadow: var(--shadow);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -100,4 +99,21 @@
     max-height: 480px;
     overflow: hidden; 
     border-radius: 18px;
+}
+
+@media (max-width: 768px) {
+    .skills__grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .skills__grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
 }

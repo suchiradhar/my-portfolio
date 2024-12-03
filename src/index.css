@@ -107,5 +107,24 @@ button {
 
 /* Ensure images fit within container */
 img {
-  max-width: 100%;
+  width: 100%;
+}
+
+@media all and (max-width:480px) {
+  :root{
+     
+      --biggest-font-size: 40px;
+      --h1-font-size: 32px;
+      --h2-font-size: 26px;
+      --h3-font-size: 24px;
+      --h4-font-size: 22px;
+      --h5-font-size: 20px;
+      --largest-font-size: 18px;
+      --larger-font-size: 16px;
+      --large-font-size: 14px;
+      --normal-font-size: 13px;
+      --small-font-size: 12px;
+      --smaller-font-size: 10px;
+      --tiny-font-size: 8px;
+  }
 }
